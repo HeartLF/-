@@ -51,8 +51,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul>
                         <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:1061256268@qq.com">1061256268@qq.com</a></li>
                         <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
-                        <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.html">登录</a></li>
-                        <li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html">注册</a></li>
+                        <% if(!show) {%>
+                            <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="/login">登录</a></li>
+                            <li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="/register">注册</a></li>
+                            <%} else {%>
+                                <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i>
+                                    <a href="#">
+                                        <%= username %>
+                                    </a>
+                                </li>
+                                <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="/logout">退出登录</a></li>
+                                <%}%>
+
                     </ul>
                 </div>
                 <div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -75,22 +85,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="logo-nav">
                 <div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-                    <h1><a href="index.html">麦田咖啡</a></h1>
+                    <h1><a href="/index">麦田咖啡</a></h1>
                 </div>
                 <div class="logo-nav-left1">
                     <nav class="navbar navbar-default">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header nav_2">
                             <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
                         </div>
                         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="index.html" class="act">Home</a></li>
+                                <li class="active"><a href="/index" class="act">Home</a></li>
                                 <!-- Mega Menu -->
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">产品<b class="caret"></b></a>
@@ -99,35 +109,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="col-sm-4">
                                                 <ul class="multi-column-dropdown">
                                                     <h6>咖啡</h6>
-                                                    <li><a href="products.html">卡布奇诺</a></li>
-                                                    <li><a href="products.html">拿铁</a></li>
-                                                    <li><a href="products.html">摩卡</a></li>
-                                                    <li><a href="products.html">马琪雅朵</a></li>
-                                                    <li><a href="products.html">美式咖啡</a></li>
-                                                    <li><a href="products.html">康宝蓝</a></li>
-                                                    <li><a href="products.html">焦糖玛琪朵</a></li>
+                                                    <li><a href="/products">卡布奇诺</a></li>
+                                                    <li><a href="/products">拿铁</a></li>
+                                                    <li><a href="/products">摩卡</a></li>
+                                                    <li><a href="/products">马琪雅朵</a></li>
+                                                    <li><a href="/products">美式咖啡</a></li>
+                                                    <li><a href="/products">康宝蓝</a></li>
+                                                    <li><a href="/products">焦糖玛琪朵</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-sm-4">
                                                 <ul class="multi-column-dropdown">
                                                     <h6>蛋糕</h6>
-                                                    <li><a href="products.html">提拉米苏</a></li>
-                                                    <li><a href="products.html">熔岩蛋糕</a></li>
-                                                    <li><a href="products.html">慕斯蛋糕</a></li>
-                                                    <li><a href="products.html">芝士蛋糕</a></li>
-                                                    <li><a href="products.html">彩虹蛋糕</a></li>
-                                                    <li><a href="products.html">纸杯蛋糕</a></li>
-                                                    <li><a href="products.html">马卡龙</a></li>
+                                                    <li><a href="/products">提拉米苏</a></li>
+                                                    <li><a href="/products">熔岩蛋糕</a></li>
+                                                    <li><a href="/products">慕斯蛋糕</a></li>
+                                                    <li><a href="/products">芝士蛋糕</a></li>
+                                                    <li><a href="/products">彩虹蛋糕</a></li>
+                                                    <li><a href="/products">纸杯蛋糕</a></li>
+                                                    <li><a href="/products">马卡龙</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-sm-4">
                                                 <ul class="multi-column-dropdown">
                                                     <h6>饮料</h6>
-                                                    <li><a href="products.html">茶瓦纳冰摇柚柚蜂蜜红茶</a></li>
-                                                    <li><a href="products.html">冰摇红莓黑加仑茶</a></li>
-                                                    <li><a href="products.html">冰摇芒果花草茶</a></li>
-                                                    <li><a href="products.html">麦芽雪冷萃</a></li>
-                                                    <li><a href="products.html">阿馥奇朵</a></li>
+                                                    <li><a href="/products">茶瓦纳冰摇柚柚蜂蜜红茶</a></li>
+                                                    <li><a href="/products">冰摇红莓黑加仑茶</a></li>
+                                                    <li><a href="/products">冰摇芒果花草茶</a></li>
+                                                    <li><a href="/products">麦芽雪冷萃</a></li>
+                                                    <li><a href="/products">阿馥奇朵</a></li>
                                                 </ul>
                                             </div>
                                             <div class="clearfix"></div>
@@ -136,8 +146,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </li>
 
 
-                                <li><a href="mail.html">产品反馈</a></li>
-                                <li><a href="dingdan.html">个人中心</a></li>
+                                <li><a href="/mail">产品反馈</a></li>
+                                <li><a href="/order">个人中心</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -162,7 +172,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="header-right">
                     <div class="cart box_1">
-                        <a href="checkout.html">
+                        <a href="/checkout">
                             <h3>
                                 <div class="total">
                                     <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
@@ -182,7 +192,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="breadcrumbs">
         <div class="container">
             <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-                <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+                <li><a href="/index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
                 <li class="active">商品详情</li>
             </ol>
         </div>
@@ -225,35 +235,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="categories animated wow slideInUp" data-wow-delay=".5s">
                     <h3>产品分类</h3>
                     <ul class="cate">
-                        <li><a href="products.html">爆款热销</a> <span>(15)</span></li>
-                        <li><a href="products.html">咖啡</a> <span>(16)</span></li>
+                        <li><a href="/products">爆款热销</a> <span>(15)</span></li>
+                        <li><a href="/products">咖啡</a> <span>(16)</span></li>
                         <ul>
-                            <li><a href="products.html">速溶</a> <span>(2)</span></li>
-                            <li><a href="products.html">拿铁</a> <span>(5)</span></li>
-                            <li><a href="products.html">美式</a> <span>(1)</span></li>
-                            <li><a href="products.html">摩卡</a> <span>(4)</span></li>
-                            <li><a href="products.html">其他</a> <span>(1)</span></li>
+                            <li><a href="/products">速溶</a> <span>(2)</span></li>
+                            <li><a href="/products">拿铁</a> <span>(5)</span></li>
+                            <li><a href="/products">美式</a> <span>(1)</span></li>
+                            <li><a href="/products">摩卡</a> <span>(4)</span></li>
+                            <li><a href="/products">其他</a> <span>(1)</span></li>
                         </ul>
-                        <li><a href="products.html">打折</a> <span>(15)</span></li>
-                        <li><a href="products.html">甜品</a> <span>(15)</span></li>
+                        <li><a href="/products">打折</a> <span>(15)</span></li>
+                        <li><a href="/products">甜品</a> <span>(15)</span></li>
                         <ul>
-                            <li><a href="products.html">蛋糕</a> <span>(2)</span></li>
-                            <li><a href="products.html">曲奇</a> <span>(2)</span></li>
-                            <li><a href="products.html">冰淇淋</a> <span>(1)</span></li>
-                            <li><a href="products.html">巧克力</a> <span>(2)</span></li>
-                            <li><a href="products.html">其他</a> <span>(4)</span></li>
+                            <li><a href="/products">蛋糕</a> <span>(2)</span></li>
+                            <li><a href="/products">曲奇</a> <span>(2)</span></li>
+                            <li><a href="/products">冰淇淋</a> <span>(1)</span></li>
+                            <li><a href="/products">巧克力</a> <span>(2)</span></li>
+                            <li><a href="/products">其他</a> <span>(4)</span></li>
                         </ul>
-                        <li><a href="products.html">咖啡衍生品</a> <span>(10)</span></li>
+                        <li><a href="/products">咖啡衍生品</a> <span>(10)</span></li>
                         <ul>
-                            <li><a href="products.html">咖啡豆</a> <span>(2)</span></li>
-                            <li><a href="products.html">可可粉</a> <span>(3)</span></li>
-                            <li><a href="products.html">方糖</a> <span>(1)</span></li>
-                            <li><a href="products.html">咖啡机</a> <span>(2)</span></li>
+                            <li><a href="/products">咖啡豆</a> <span>(2)</span></li>
+                            <li><a href="/products">可可粉</a> <span>(3)</span></li>
+                            <li><a href="/products">方糖</a> <span>(1)</span></li>
+                            <li><a href="/products">咖啡机</a> <span>(2)</span></li>
                         </ul>
                     </ul>
                 </div>
                 <div class="men-position animated wow slideInUp" data-wow-delay=".5s">
-                    <a href="single.html"><img src="images/29.jpg" alt=" " class="img-responsive" /></a>
+                    <a href="/single"><img src="images/29.jpg" alt=" " class="img-responsive" /></a>
                     <div class="men-position-pos">
                         <h4>coffeemaker</h4>
                         <h5>¥399</h5>
@@ -328,7 +338,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <br>
                     <div class="occasion-cart">
-                        <a class="item_add" href="#">添加购物车</a>
+                        <a class="item_add" href="/checkout">添加购物车</a>
                     </div>
                     <div class="social">
                         <div class="social-left">
@@ -471,9 +481,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-3 new-collections-grid">
                     <div class="new-collections-grid1 animated wow slideInLeft" data-wow-delay=".5s">
                         <div class="new-collections-grid1-image">
-                            <a href="single.html" class="product-image"><img src="images/8.jpg" alt=" " class="img-responsive"></a>
+                            <a href="/single" class="product-image"><img src="images/8.jpg" alt=" " class="img-responsive"></a>
                             <div class="new-collections-grid1-image-pos">
-                                <a href="single.html">详情查看</a>
+                                <a href="/single">详情查看</a>
                             </div>
                             <div class="new-collections-grid1-right">
                                 <div class="rating">
@@ -496,10 +506,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                             </div>
                         </div>
-                        <h4><a href="single.html">咖啡</a></h4>
+                        <h4><a href="/single">咖啡</a></h4>
                         <p>麦田咖啡，专一做最好的咖啡！</p>
                         <div class="new-collections-grid1-left simpleCart_shelfItem">
-                            <p><i>¥33</i> <span class="item_price">¥25</span><a class="item_add" href="#">添加购物车 </a></p>
+                            <p><i>¥33</i> <span class="item_price">¥25</span><a class="item_add" href="/checkout">添加购物车 </a></p>
                         </div>
                     </div>
                 </div>
@@ -507,9 +517,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="new-collections-grid1-sub">
                         <div class="new-collections-grid1 animated wow slideInLeft" data-wow-delay=".6s">
                             <div class="new-collections-grid1-image">
-                                <a href="single.html" class="product-image"><img src="images/6.jpg" alt=" " class="img-responsive"></a>
+                                <a href="/single" class="product-image"><img src="images/6.jpg" alt=" " class="img-responsive"></a>
                                 <div class="new-collections-grid1-image-pos">
-                                    <a href="single.html">详情查看</a>
+                                    <a href="/single">详情查看</a>
                                 </div>
                                 <div class="new-collections-grid1-right">
                                     <div class="rating">
@@ -532,19 +542,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </div>
                                 </div>
                             </div>
-                            <h4><a href="single.html">甜品</a></h4>
+                            <h4><a href="/single">甜品</a></h4>
                             <p>麦田咖啡，专一做最好的咖啡！</p>
                             <div class="new-collections-grid1-left simpleCart_shelfItem">
-                                <p><i>¥48</i> <span class="item_price">¥40</span><a class="item_add" href="#">添加购物车 </a></p>
+                                <p><i>¥48</i> <span class="item_price">¥40</span><a class="item_add" href="/checkout">添加购物车 </a></p>
                             </div>
                         </div>
                     </div>
                     <div class="new-collections-grid1-sub">
                         <div class="new-collections-grid1 animated wow slideInLeft" data-wow-delay=".7s">
                             <div class="new-collections-grid1-image">
-                                <a href="single.html" class="product-image"><img src="images/9.jpg" alt=" " class="img-responsive"></a>
+                                <a href="/single" class="product-image"><img src="images/9.jpg" alt=" " class="img-responsive"></a>
                                 <div class="new-collections-grid1-image-pos">
-                                    <a href="single.html">详情查看</a>
+                                    <a href="/single">详情查看</a>
                                 </div>
                                 <div class="new-collections-grid1-right">
                                     <div class="rating">
@@ -567,10 +577,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </div>
                                 </div>
                             </div>
-                            <h4><a href="single.html">甜品</a></h4>
+                            <h4><a href="/single">甜品</a></h4>
                             <p>麦田咖啡，专一做最好的咖啡！</p>
                             <div class="new-collections-grid1-left simpleCart_shelfItem">
-                                <p><i>¥28</i> <span class="item_price">¥15</span><a class="item_add" href="#">添加购物车 </a></p>
+                                <p><i>¥28</i> <span class="item_price">¥15</span><a class="item_add" href="/checkout">添加购物车 </a></p>
                             </div>
                         </div>
                     </div>
@@ -579,9 +589,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-3 new-collections-grid">
                     <div class="new-collections-grid1 animated wow slideInLeft" data-wow-delay=".8s">
                         <div class="new-collections-grid1-image">
-                            <a href="single.html" class="product-image"><img src="images/11.jpg" alt=" " class="img-responsive"></a>
+                            <a href="/single" class="product-image"><img src="images/11.jpg" alt=" " class="img-responsive"></a>
                             <div class="new-collections-grid1-image-pos">
-                                <a href="single.html">详情查看</a>
+                                <a href="/single">详情查看</a>
                             </div>
                             <div class="new-collections-grid1-right">
                                 <div class="rating">
@@ -604,10 +614,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                             </div>
                         </div>
-                        <h4><a href="single.html">咖啡</a></h4>
+                        <h4><a href="/single">咖啡</a></h4>
                         <p>麦田咖啡，专一做最好的咖啡！</p>
                         <div class="new-collections-grid1-left simpleCart_shelfItem">
-                            <p><i>¥34</i> <span class="item_price">¥25</span><a class="item_add" href="#">添加购物车 </a></p>
+                            <p><i>¥34</i> <span class="item_price">¥25</span><a class="item_add" href="/checkout">添加购物车 </a></p>
                         </div>
                     </div>
                 </div>
@@ -658,11 +668,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="clearfix"> </div>
         </div>
         <div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
-            <h2><a href="index.html">Best Store <span>shop anywhere</span></a></h2>
+            <h2><a href="/index">Best Store <span>shop anywhere</span></a></h2>
         </div>
         <div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
             <p>Copyright &copy; 2018.软件1604
-                <a href="http://www.cssmoban.com/" target="_blank" title="麦田咖啡"></a> - Collect from <a href="http://www.cssmoban.com/" title="麦田咖啡" target="_blank">麦田咖啡</a></p>
+                <a href="" target="_blank" title="麦田咖啡"></a> - Collect from <a href="" title="麦田咖啡" target="_blank">麦田咖啡</a></p>
         </div>
     </div>
     <!-- //footer -->

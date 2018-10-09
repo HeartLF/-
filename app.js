@@ -18,9 +18,18 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+//页面接口
 app.get('/', router.showindex);
 app.get('/login', router.showLogin);
 app.get('/register', router.showRegister);
+app.get('/products', router.showProducts);
+app.get('/order', router.showOrder);
+app.get('/mail', router.showMail);
+app.get('/single', router.showSingle);
+app.get('/checkout', router.showCheckout);
+
+//数据接口
 app.post('/register', router.register)
 app.post('/login', router.doLogin)
+app.get('/logout', router.doLogout);
 app.listen(8080);
